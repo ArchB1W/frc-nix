@@ -10,16 +10,18 @@ lib.makeScope pkgs.newScope (self: with self; {
     hash = "sha256-H/dMLI2wOiJ+/Z8//Q7QzAFc51dZ3L16evLJI1UaS8c=";
   };
 
-  buildBinTool = callPackage ./build-bin-tool.nix { };
-  buildJavaTool = callPackage ./build-java-tool.nix { };
+  buildBinTool = callPackage ./suite/build-bin-tool.nix { };
+  buildJavaTool = callPackage ./suite/build-java-tool.nix { };
 
-  datalogtool = callPackage ./datalogtool.nix { };
-  glass = callPackage ./glass.nix { };
-  outlineviewer = callPackage ./outlineviewer.nix { };
-  pathweaver = callPackage ./pathweaver.nix { };
-  roborioteamnumbersetter = callPackage ./roborioteamnumbersetter.nix { };
-  robotbuilder = callPackage ./robotbuilder.nix { };
-  shuffleboard = callPackage ./shuffleboard.nix { };
-  smartdashboard = callPackage ./smartdashboard.nix { };
-  sysid = callPackage ./sysid.nix { };
+  datalogtool = callPackage ./suite/datalogtool.nix { };
+  glass = callPackage ./suite/glass.nix { };
+  outlineviewer = callPackage ./suite/outlineviewer.nix { };
+  pathweaver = callPackage ./suite/pathweaver.nix { };
+  roborioteamnumbersetter = callPackage ./suite/roborioteamnumbersetter.nix { };
+  robotbuilder = callPackage ./suite/robotbuilder.nix { };
+  shuffleboard = callPackage ./suite/shuffleboard.nix { };
+  smartdashboard = callPackage ./suite/smartdashboard.nix { };
+  sysid = callPackage ./suite/sysid.nix { };
+
+  vscode-wpilib = callPackage ./vscode-extension { };
 })
